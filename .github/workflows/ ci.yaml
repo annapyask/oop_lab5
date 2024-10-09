@@ -22,6 +22,7 @@ jobs:
         env:
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          JAVA_FILE_NAME: lab_5/checkstyle.xml
+          JAVA_FILE_NAME: checkstyle.xml
+          JAVA_LINTER_RULES: checkstyle.xml
       - name: Test with Maven
         run: mvn --batch-mode --update-snapshots package
