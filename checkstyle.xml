@@ -300,6 +300,29 @@
 
         <module name="NeedBraces"/>
 
+        <module name="MethodLength">
+            <property name="min" value="3"/> <!-- Enforce methods to have at least 3 lines -->
+        </module>
+
+        <!-- Checks for class names to follow a stricter naming convention -->
+        <module name="ClassTypeParameterName">
+            <property name="format" value="^[A-Z][a-zA-Z0-9]*$"/>
+        </module>
+
+        <!-- Limits the maximum depth of anonymous inner classes -->
+        <module name="AnonInnerLength">
+            <property name="max" value="20"/>
+        </module>
+
+        <!-- Enforces a limit on the number of parameters in a method -->
+        <module name="ParameterNumber">
+            <property name="max" value="4"/> <!-- No method should have more than 4 parameters -->
+        </module>
+
+        <!-- Ensures that methods are not overloaded with too many lines -->
+        <module name="MethodCount">
+            <property name="max" value="50"/> <!-- Limit number of methods per class -->
+        </module>
 
     </module>
 
